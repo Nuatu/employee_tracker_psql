@@ -2,6 +2,8 @@ require 'active_record'
 require 'rspec'
 require 'shoulda-matchers'
 
+ATTRIBUTES = {'name' => 'nuatu'}
+
 require 'employee'
 
 database_configurations = YAML::load(File.open('./db/config.yml'))

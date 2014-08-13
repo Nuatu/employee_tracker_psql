@@ -35,16 +35,15 @@ end
 
 def add
   puts "Employee name to add?"
-  task_name = gets.chomp
-  employee = Task.new(:name => employee_name, :done => false)
+  employee_name = gets.chomp
+  employee = Employee.new(:name => employee_name)
   employee.save
-  "'#{employee.name}' has been addded to your Employee list."
 end
 
 def list
   puts "Employees:"
-  employees = Task.not_done
+  employees = Employee.all
   employees.each { |employee| puts employee.name }
 end
 
-welcom
+welcome
