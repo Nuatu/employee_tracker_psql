@@ -7,4 +7,10 @@ describe Employee do
     expect(test_employee).to be_a Employee
     expect(test_employee.name).to eq 'nuatu'
   end
+
+  it 'belongs to a division' do
+    division = Division.create(ATTRIBUTES)
+    employee = Employee.create({:name => "sterling", :division_id => division.id})
+    expect(employee.division).to eq division
+  end
 end
